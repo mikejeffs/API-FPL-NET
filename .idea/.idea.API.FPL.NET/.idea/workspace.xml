@@ -1,0 +1,628 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3f2f1227-43cd-4003-b8db-cdfb872f086a" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../FPL.NET/FPL.NET/Http/IHttpService.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
+              <folding>
+                <marker date="1562618808963" expanded="true" signature="6:77" ph="..." />
+                <marker date="1562618808963" expanded="true" signature="101:781" ph="{...}" />
+                <marker date="1562618808963" expanded="true" signature="137:779" ph="{...}" />
+                <marker date="1562618808963" expanded="true" signature="230:772" ph="/* IObservable&lt;IResponse&gt; Post(string url, object body , IRequestOptions options = null); ... */" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../FPL.NET/FPL.NET/Services/BaseService.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+              <folding>
+                <marker date="1562619768618" expanded="false" signature="6:79" ph="..." />
+                <marker date="1562619768618" expanded="true" signature="107:991" ph="{...}" />
+                <marker date="1562619768618" expanded="true" signature="147:989" ph="{...}" />
+                <marker date="1562619768618" expanded="true" signature="443:983" ph="{...}" />
+                <marker date="1562619768618" expanded="true" signature="567:810" ph="{...}" />
+                <marker date="1562619768618" expanded="true" signature="710:796" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/API.FPL.NET/Controllers/UserEntriesController.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="29" column="13" lean-forward="true" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+              <folding>
+                <marker date="1562793784985" expanded="false" signature="6:174" ph="..." />
+                <marker date="1562793784985" expanded="true" signature="209:1192" ph="{...}" />
+                <marker date="1562793784985" expanded="true" signature="317:1190" ph="{...}" />
+                <marker date="1562793784985" expanded="true" signature="449:510" ph="{...}" />
+                <marker date="1562793784985" expanded="true" signature="584:1184" ph="{...}" />
+                <marker date="1562793784985" expanded="true" signature="747:834" ph="{...}" />
+                <marker date="1562793784985" expanded="true" signature="871:957" ph="{...}" />
+                <marker date="1562793784985" expanded="true" signature="1000:1145" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../FPL.NET/FPL.NET/Services/UserEntryService.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+              <folding>
+                <marker date="1562793529538" expanded="false" signature="6:136" ph="..." />
+                <marker date="1562793529538" expanded="true" signature="164:689" ph="{...}" />
+                <marker date="1562793529538" expanded="true" signature="214:687" ph="{...}" />
+                <marker date="1562793529538" expanded="true" signature="298:355" ph="{...}" />
+                <marker date="1562793529538" expanded="true" signature="422:681" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/API.FPL.NET/Http/HttpService.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="22" column="60" selection-start-line="22" selection-start-column="60" selection-end-line="22" selection-end-column="60" />
+              <folding>
+                <marker date="1562618860874" expanded="false" signature="6:132" ph="..." />
+                <marker date="1562618860874" expanded="true" signature="160:875" ph="{...}" />
+                <marker date="1562618860874" expanded="true" signature="206:873" ph="{...}" />
+                <marker date="1562618860874" expanded="true" signature="310:867" ph="{...}" />
+                <marker date="1562618860874" expanded="true" signature="576:659" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../FPL.NET/FPL.NET/Models/User.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="630">
+              <caret line="64" column="21" selection-start-line="64" selection-start-column="21" selection-end-line="64" selection-end-column="21" />
+              <folding>
+                <marker date="1562792679510" expanded="true" signature="59:2082" ph="{...}" />
+                <marker date="1562792679510" expanded="true" signature="90:2080" ph="{...}" />
+                <marker date="1562792679510" expanded="true" signature="105:178" ph="/// Users unique identifier. ... " />
+                <marker date="1562792679510" expanded="true" signature="224:349" ph="/// The users favourite team, expressed as a number value (i.e. 10 = Liverpool). ... " />
+                <marker date="1562792679510" expanded="true" signature="406:476" ph="/// The users first name. ... " />
+                <marker date="1562792679510" expanded="true" signature="545:612" ph="/// The users surname. ... " />
+                <marker date="1562792679510" expanded="true" signature="681:768" ph="/// The country in which the user resides. ... " />
+                <marker date="1562792679510" expanded="true" signature="839:912" ph="/// The user overall points. ... " />
+                <marker date="1562792679510" expanded="true" signature="987:1069" ph="/// The users overall global ranking. ... " />
+                <marker date="1562792679510" expanded="true" signature="1142:1238" ph="/// The gameweek in which the user started playing. ... " />
+                <marker date="1562792679510" expanded="true" signature="1305:1398" ph="/// The Date/Time in which the user was created. ... " />
+                <marker date="1562792679510" expanded="true" signature="1463:1546" ph="/// The users current gameweek points. ... " />
+                <marker date="1562792679510" expanded="true" signature="1619:1700" ph="/// The users current gameweek rank. ... " />
+                <marker date="1562792679510" expanded="true" signature="1771:1863" ph="/// The list of leagues that a user belongs to. ... " />
+                <marker date="1562792679510" expanded="true" signature="1964:2033" ph="/// The users team name. ... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../FPL.NET/FPL.NET/Models/League.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+              <folding>
+                <marker date="1562792580435" expanded="false" signature="6:66" ph="..." />
+                <marker date="1562792580435" expanded="true" signature="92:1513" ph="{...}" />
+                <marker date="1562792580435" expanded="true" signature="125:199" ph="{...}" />
+                <marker date="1562792580435" expanded="true" signature="238:1511" ph="{...}" />
+                <marker date="1562792580435" expanded="true" signature="253:327" ph="/// League unique identifier. ... " />
+                <marker date="1562792580435" expanded="true" signature="384:456" ph="/// The name of the league. ... " />
+                <marker date="1562792580435" expanded="true" signature="515:604" ph="/// Determines if the league is invite-only. ... " />
+                <marker date="1562792580435" expanded="true" signature="655:707" ph="/// ??? ... " />
+                <marker date="1562792580435" expanded="true" signature="766:865" ph="/// The maximum number of participants for the league. ... " />
+                <marker date="1562792580435" expanded="true" signature="930:982" ph="/// ??? ... " />
+                <marker date="1562792580435" expanded="true" signature="1047:1151" ph="/// The gameweek in which the league is to start operating. ... " />
+                <marker date="1562792580435" expanded="true" signature="1216:1303" ph="/// The users current rank in this league. ... " />
+                <marker date="1562792580435" expanded="true" signature="1367:1455" ph="/// The users previous rank in this league. ... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../FPL.NET/FPL.NET/Http/RequestOptions.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+              <folding>
+                <marker date="1562619237077" expanded="true" signature="49:605" ph="{...}" />
+                <marker date="1562619237077" expanded="true" signature="108:603" ph="{...}" />
+                <marker date="1562619237077" expanded="true" signature="533:597" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../FPL.NET/FPL.NET/Http/Headers.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="555">
+              <caret line="49" selection-start-line="49" selection-end-line="49" />
+              <folding>
+                <marker date="1562618068561" expanded="true" signature="57:1208" ph="{...}" />
+                <marker date="1562618068561" expanded="true" signature="91:1206" ph="{...}" />
+                <marker date="1562618068561" expanded="true" signature="232:450" ph="{...}" />
+                <marker date="1562618068561" expanded="true" signature="286:356" ph="{...}" />
+                <marker date="1562618068561" expanded="true" signature="373:440" ph="{...}" />
+                <marker date="1562618068561" expanded="true" signature="490:619" ph="{...}" />
+                <marker date="1562618068561" expanded="true" signature="543:609" ph="{...}" />
+                <marker date="1562618068561" expanded="true" signature="658:857" ph="{...}" />
+                <marker date="1562618068561" expanded="true" signature="753:820" ph="{...}" />
+                <marker date="1562618068561" expanded="true" signature="909:980" ph="{...}" />
+                <marker date="1562618068561" expanded="true" signature="1028:1094" ph="{...}" />
+                <marker date="1562618068561" expanded="true" signature="1151:1200" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/API.FPL.NET/Controllers/UserEntriesController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/API.FPL.NET/Http/ResponseFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../FPL.NET/FPL.NET/Http/ServiceResponse.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/API.FPL.NET/Http/HttpService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../FPL.NET/FPL.NET/Http/Enums/ResponseContentType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C94F9295-A3D1-4DCD-896C-CA19215672D7/3b/c3c9183c/RestClient.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../FPL.NET/FPL.NET/Http/IRequestOptions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../FPL.NET/FPL.NET/Services/UserEntryService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../FPL.NET/FPL.NET/Models/League.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../FPL.NET/FPL.NET/Models/User.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../FPL.NET/FPL.NET/Http/RequestOptions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../FPL.NET/FPL.NET/Services/BaseService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../FPL.NET/FPL.NET/Http/IHttpService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../FPL.NET/FPL.NET/Http/IResponse.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../FPL.NET/FPL.NET/Http/Enums/ResponseType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../FPL.NET/FPL.NET/Http/Headers.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/../FPL.NET/FPL.NET/Http/Headers.cs" />
+        <option value="$PROJECT_DIR$/../FPL.NET/FPL.NET/Http/Enums/ResponseType.cs" />
+        <option value="$PROJECT_DIR$/../FPL.NET/FPL.NET/Http/Enums/ResponseContentType.cs" />
+        <option value="$PROJECT_DIR$/../FPL.NET/FPL.NET/Http/IResponse.cs" />
+        <option value="$PROJECT_DIR$/../FPL.NET/FPL.NET/Http/ServiceResponse.cs" />
+        <option value="$PROJECT_DIR$/../FPL.NET/FPL.NET/Settings.cs" />
+        <option value="$PROJECT_DIR$/../FPL.NET/FPL.NET/Http/IRequestOptions.cs" />
+        <option value="$PROJECT_DIR$/../FPL.NET/FPL.NET/Http/IHttpService.cs" />
+        <option value="$PROJECT_DIR$/API.FPL.NET/Http/HttpService.cs" />
+        <option value="$PROJECT_DIR$/../FPL.NET/FPL.NET/Http/RequestOptions.cs" />
+        <option value="$PROJECT_DIR$/../FPL.NET/FPL.NET/Services/BaseService.cs" />
+        <option value="$PROJECT_DIR$/../FPL.NET/FPL.NET/Models/League.cs" />
+        <option value="$PROJECT_DIR$/../FPL.NET/FPL.NET/Models/User.cs" />
+        <option value="$PROJECT_DIR$/../FPL.NET/FPL.NET/Services/UserEntryService.cs" />
+        <option value="$PROJECT_DIR$/API.FPL.NET/Controllers/UserEntriesController.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="2560" />
+    <option name="height" value="1417" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="SolutionExplorer" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="SolutionExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="API.FPL.NET" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="API.FPL.NET" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="API.FPL.NET" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="API.FPL.NET" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="API.FPL.NET" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Controllers" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="API.FPL.NET" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="API.FPL.NET" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Http" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <option name="show-all-files" value="false" />
+      </pane>
+      <pane id="FileSystemExplorer" />
+      <pane id="AssemblyExplorer" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
+    <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected=".NET Launch Settings Profile.API.FPL.NET">
+    <configuration name="API.FPL.NET" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/API.FPL.NET/API.FPL.NET.csproj" />
+      <option name="LAUNCH_PROFILE_TFM" value=".NETCoreApp,Version=v2.2" />
+      <option name="LAUNCH_PROFILE_NAME" value="API.FPL.NET" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="GENERATE_APPLICATIONHOST_CONFIG" value="1" />
+      <option name="SHOW_IIS_EXPRESS_OUTPUT" value="0" />
+      <option name="SEND_DEBUG_REQUEST" value="1" />
+      <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="API.FPL.NET: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/API.FPL.NET/API.FPL.NET.csproj" />
+      <option name="LAUNCH_PROFILE_TFM" value=".NETCoreApp,Version=v2.2" />
+      <option name="LAUNCH_PROFILE_NAME" value="IIS Express" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="GENERATE_APPLICATIONHOST_CONFIG" value="1" />
+      <option name="SHOW_IIS_EXPRESS_OUTPUT" value="0" />
+      <option name="SEND_DEBUG_REQUEST" value="1" />
+      <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3f2f1227-43cd-4003-b8db-cdfb872f086a" name="Default Changelist" comment="" />
+      <created>1562514843623</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1562514843623</updated>
+      <workItem from="1562514845007" duration="104000" />
+      <workItem from="1562617587755" duration="3011000" />
+      <workItem from="1562792211570" duration="1614000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="4729000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="2560" height="1417" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25575852" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32981133" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="NuGet" order="7" />
+      <window_info anchor="bottom" id="Performance Profiler" order="8" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Database Changes" order="11" />
+      <window_info anchor="bottom" id="Unit Tests" order="12" />
+      <window_info anchor="bottom" id="REST Client" order="13" />
+      <window_info anchor="bottom" id="Terminal" order="14" />
+      <window_info anchor="bottom" id="Event Log" order="15" side_tool="true" />
+      <window_info anchor="bottom" id="Build" order="16" weight="0.32981133" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Errors In Solution" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Unit Tests Coverage" order="5" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" suspend="NONE" type="DotNet Exception Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/../FPL.NET/FPL.NET/Http/Enums/ResponseContentType.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+          <folding>
+            <marker date="1562618173695" expanded="true" signature="28:128" ph="{...}" />
+            <marker date="1562618173695" expanded="true" signature="66:126" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../FPL.NET/FPL.NET/Http/Enums/ResponseType.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+          <folding>
+            <marker date="1562618159952" expanded="true" signature="28:149" ph="{...}" />
+            <marker date="1562618159952" expanded="true" signature="59:147" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../FPL.NET/FPL.NET/Settings.cs" />
+    <entry file="file://$PROJECT_DIR$/../FPL.NET/FPL.NET/Http/IResponse.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+          <folding>
+            <marker date="1562618180307" expanded="true" signature="6:39" ph="..." />
+            <marker date="1562618180307" expanded="true" signature="63:393" ph="{...}" />
+            <marker date="1562618180307" expanded="true" signature="96:391" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../FPL.NET/FPL.NET/Http/ServiceResponse.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <marker date="1562618196794" expanded="true" signature="6:39" ph="..." />
+            <marker date="1562618196794" expanded="true" signature="63:470" ph="{...}" />
+            <marker date="1562618196794" expanded="true" signature="110:468" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../FPL.NET/FPL.NET/Http/IRequestOptions.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+          <folding>
+            <marker date="1562618808966" expanded="true" signature="49:501" ph="{...}" />
+            <marker date="1562618808966" expanded="true" signature="88:499" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../FPL.NET/FPL.NET/Http/RequestOptions.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+          <folding>
+            <marker date="1562619237077" expanded="true" signature="49:605" ph="{...}" />
+            <marker date="1562619237077" expanded="true" signature="108:603" ph="{...}" />
+            <marker date="1562619237077" expanded="true" signature="533:597" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../FPL.NET/FPL.NET/Http/Headers.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
+          <folding>
+            <marker date="1562618068561" expanded="true" signature="57:1208" ph="{...}" />
+            <marker date="1562618068561" expanded="true" signature="91:1206" ph="{...}" />
+            <marker date="1562618068561" expanded="true" signature="232:450" ph="{...}" />
+            <marker date="1562618068561" expanded="true" signature="286:356" ph="{...}" />
+            <marker date="1562618068561" expanded="true" signature="373:440" ph="{...}" />
+            <marker date="1562618068561" expanded="true" signature="490:619" ph="{...}" />
+            <marker date="1562618068561" expanded="true" signature="543:609" ph="{...}" />
+            <marker date="1562618068561" expanded="true" signature="658:857" ph="{...}" />
+            <marker date="1562618068561" expanded="true" signature="753:820" ph="{...}" />
+            <marker date="1562618068561" expanded="true" signature="909:980" ph="{...}" />
+            <marker date="1562618068561" expanded="true" signature="1028:1094" ph="{...}" />
+            <marker date="1562618068561" expanded="true" signature="1151:1200" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../FPL.NET/FPL.NET/Models/User.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="64" column="21" selection-start-line="64" selection-start-column="21" selection-end-line="64" selection-end-column="21" />
+          <folding>
+            <marker date="1562792679510" expanded="true" signature="59:2082" ph="{...}" />
+            <marker date="1562792679510" expanded="true" signature="90:2080" ph="{...}" />
+            <marker date="1562792679510" expanded="true" signature="105:178" ph="/// Users unique identifier. ... " />
+            <marker date="1562792679510" expanded="true" signature="224:349" ph="/// The users favourite team, expressed as a number value (i.e. 10 = Liverpool). ... " />
+            <marker date="1562792679510" expanded="true" signature="406:476" ph="/// The users first name. ... " />
+            <marker date="1562792679510" expanded="true" signature="545:612" ph="/// The users surname. ... " />
+            <marker date="1562792679510" expanded="true" signature="681:768" ph="/// The country in which the user resides. ... " />
+            <marker date="1562792679510" expanded="true" signature="839:912" ph="/// The user overall points. ... " />
+            <marker date="1562792679510" expanded="true" signature="987:1069" ph="/// The users overall global ranking. ... " />
+            <marker date="1562792679510" expanded="true" signature="1142:1238" ph="/// The gameweek in which the user started playing. ... " />
+            <marker date="1562792679510" expanded="true" signature="1305:1398" ph="/// The Date/Time in which the user was created. ... " />
+            <marker date="1562792679510" expanded="true" signature="1463:1546" ph="/// The users current gameweek points. ... " />
+            <marker date="1562792679510" expanded="true" signature="1619:1700" ph="/// The users current gameweek rank. ... " />
+            <marker date="1562792679510" expanded="true" signature="1771:1863" ph="/// The list of leagues that a user belongs to. ... " />
+            <marker date="1562792679510" expanded="true" signature="1964:2033" ph="/// The users team name. ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../FPL.NET/FPL.NET/Models/League.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+          <folding>
+            <marker date="1562792580435" expanded="false" signature="6:66" ph="..." />
+            <marker date="1562792580435" expanded="true" signature="92:1513" ph="{...}" />
+            <marker date="1562792580435" expanded="true" signature="125:199" ph="{...}" />
+            <marker date="1562792580435" expanded="true" signature="238:1511" ph="{...}" />
+            <marker date="1562792580435" expanded="true" signature="253:327" ph="/// League unique identifier. ... " />
+            <marker date="1562792580435" expanded="true" signature="384:456" ph="/// The name of the league. ... " />
+            <marker date="1562792580435" expanded="true" signature="515:604" ph="/// Determines if the league is invite-only. ... " />
+            <marker date="1562792580435" expanded="true" signature="655:707" ph="/// ??? ... " />
+            <marker date="1562792580435" expanded="true" signature="766:865" ph="/// The maximum number of participants for the league. ... " />
+            <marker date="1562792580435" expanded="true" signature="930:982" ph="/// ??? ... " />
+            <marker date="1562792580435" expanded="true" signature="1047:1151" ph="/// The gameweek in which the league is to start operating. ... " />
+            <marker date="1562792580435" expanded="true" signature="1216:1303" ph="/// The users current rank in this league. ... " />
+            <marker date="1562792580435" expanded="true" signature="1367:1455" ph="/// The users previous rank in this league. ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../FPL.NET/FPL.NET/Http/IHttpService.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <marker date="1562618808963" expanded="true" signature="6:77" ph="..." />
+            <marker date="1562618808963" expanded="true" signature="101:781" ph="{...}" />
+            <marker date="1562618808963" expanded="true" signature="137:779" ph="{...}" />
+            <marker date="1562618808963" expanded="true" signature="230:772" ph="/* IObservable&lt;IResponse&gt; Post(string url, object body , IRequestOptions options = null); ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API.FPL.NET/Http/ResponseFactory.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <folding>
+            <marker date="1562518584738" expanded="false" signature="6:50" ph="..." />
+            <marker date="1562518584738" expanded="true" signature="78:490" ph="{...}" />
+            <marker date="1562518584738" expanded="true" signature="113:488" ph="{...}" />
+            <marker date="1562518584738" expanded="true" signature="179:482" ph="{...}" />
+            <marker date="1562518584738" expanded="true" signature="241:471" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C94F9295-A3D1-4DCD-896C-CA19215672D7/3b/c3c9183c/RestClient.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="662">
+          <caret line="336" column="64" lean-forward="true" selection-start-line="336" selection-start-column="64" selection-end-line="336" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API.FPL.NET/Http/HttpService.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="22" column="60" selection-start-line="22" selection-start-column="60" selection-end-line="22" selection-end-column="60" />
+          <folding>
+            <marker date="1562618860874" expanded="false" signature="6:132" ph="..." />
+            <marker date="1562618860874" expanded="true" signature="160:875" ph="{...}" />
+            <marker date="1562618860874" expanded="true" signature="206:873" ph="{...}" />
+            <marker date="1562618860874" expanded="true" signature="310:867" ph="{...}" />
+            <marker date="1562618860874" expanded="true" signature="576:659" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../FPL.NET/FPL.NET/Services/BaseService.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+          <folding>
+            <marker date="1562619768618" expanded="false" signature="6:79" ph="..." />
+            <marker date="1562619768618" expanded="true" signature="107:991" ph="{...}" />
+            <marker date="1562619768618" expanded="true" signature="147:989" ph="{...}" />
+            <marker date="1562619768618" expanded="true" signature="443:983" ph="{...}" />
+            <marker date="1562619768618" expanded="true" signature="567:810" ph="{...}" />
+            <marker date="1562619768618" expanded="true" signature="710:796" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../FPL.NET/FPL.NET/Services/UserEntryService.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <marker date="1562793529538" expanded="false" signature="6:136" ph="..." />
+            <marker date="1562793529538" expanded="true" signature="164:689" ph="{...}" />
+            <marker date="1562793529538" expanded="true" signature="214:687" ph="{...}" />
+            <marker date="1562793529538" expanded="true" signature="298:355" ph="{...}" />
+            <marker date="1562793529538" expanded="true" signature="422:681" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API.FPL.NET/Controllers/UserEntriesController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="29" column="13" lean-forward="true" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+          <folding>
+            <marker date="1562793784985" expanded="false" signature="6:174" ph="..." />
+            <marker date="1562793784985" expanded="true" signature="209:1192" ph="{...}" />
+            <marker date="1562793784985" expanded="true" signature="317:1190" ph="{...}" />
+            <marker date="1562793784985" expanded="true" signature="449:510" ph="{...}" />
+            <marker date="1562793784985" expanded="true" signature="584:1184" ph="{...}" />
+            <marker date="1562793784985" expanded="true" signature="747:834" ph="{...}" />
+            <marker date="1562793784985" expanded="true" signature="871:957" ph="{...}" />
+            <marker date="1562793784985" expanded="true" signature="1000:1145" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

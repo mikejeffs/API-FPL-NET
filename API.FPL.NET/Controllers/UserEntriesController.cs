@@ -1,19 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using FPL.NET.Models;
+﻿using System.ComponentModel;
 using FPL.NET.Models.User;
 using FPL.NET.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.FPL.NET.Controllers
 {
-    [Route("api/user-entry")]
+    [Route("api/v0/user-entry")]
+    [Produces("application/json")]
     [ApiController]
     public class UserEntriesController : ControllerBase
     {
-
         private readonly UserEntryService _userEntryService;
 
         public UserEntriesController(UserEntryService service)
@@ -23,6 +19,9 @@ namespace API.FPL.NET.Controllers
 
      
         [HttpGet("{id}")]
+        [ProducesResponseType(typeof(User), 200)]
+        [ProducesResponseType(400)]
+        [Description("Returns a User from the specified id if one exists.")]
         public IActionResult Get(int id)
         {
             Exception err = null;
@@ -46,6 +45,9 @@ namespace API.FPL.NET.Controllers
         }
 
         [HttpGet("{id}/history")]
+        [ProducesResponseType(typeof(UserHistory), 200)]
+        [ProducesResponseType(400)]
+        [Description("Returns a Users previous season data from the specified id if one exists.")]
         public IActionResult GetSeasonHistory(int id)
         {
             UserHistory seasonHistory = null;
@@ -58,6 +60,9 @@ namespace API.FPL.NET.Controllers
         }
 
         [HttpGet("{id}/game-week/{eventId}/picks")]
+        [ProducesResponseType(typeof(UserEventPicks), 200)]
+        [ProducesResponseType(400)]
+        [Description("Returns a the team selections made by the user for a given game week.")]
         public IActionResult GetPicksForEvent(int id, int eventId)
         {
             UserEventPicks picks = null;
@@ -75,6 +80,9 @@ namespace API.FPL.NET.Controllers
         }
 
         [HttpGet("{id}/team")]
+        [ProducesResponseType(typeof(User), 200)]
+        [ProducesResponseType(400)]
+        [Description("Returns the users current fantasy team, as well as any transfers made, and chips.")]
         public IActionResult GetUserTeam(int id)
         {
             UserTeam team = null;
@@ -92,12 +100,18 @@ namespace API.FPL.NET.Controllers
         }
 
         [HttpGet("{id}/transfers")]
+        // [ProducesResponseType(typeof(User), 200)]
+        [ProducesResponseType(400)]
+        [Description("Returns the transfer history for a given users fantasy team.")]
         public IActionResult GetTransfers(int id)
         {
             throw new NotImplementedException("Endpoint not found, so cannot implement this yet!");
         }
 
         [HttpGet("{id}/cup")]
+        // [ProducesResponseType(typeof(User), 200)]
+        [ProducesResponseType(400)]
+        [Description("Returns the current seasons cup history for a given user.")]
         public IActionResult GetCups(int id)
         {
             throw new NotImplementedException("Endpoint not found, so cannot implement this yet!");

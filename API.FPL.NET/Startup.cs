@@ -29,7 +29,11 @@ namespace API.FPL.NET
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-           // services.AddScoped<BaseService>();
+
+            // Register the Swagger services
+            services.AddSwaggerDocument();
+
+            // Register FPL.NET Services.
             services.AddScoped<UserEntryService>();
             services.AddSingleton<IHttpService, HttpService>();
         }
@@ -46,6 +50,10 @@ namespace API.FPL.NET
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
+            // Register the Swagger generator and the Swagger UI middlewares
+            app.UseOpenApi();
+            app.UseSwaggerUi3();
 
             app.UseHttpsRedirection();
             app.UseMvc();

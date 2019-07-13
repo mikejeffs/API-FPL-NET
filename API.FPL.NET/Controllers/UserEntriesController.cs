@@ -74,6 +74,23 @@ namespace API.FPL.NET.Controllers
             return Ok(picks);
         }
 
+        [HttpGet("{id}/team")]
+        public IActionResult GetUserTeam(int id)
+        {
+            UserTeam team = null;
+            string errorMessage = string.Empty;
+            _userEntryService.GetUserTeam(id).Result.Subscribe(res => team = res,
+                error => errorMessage = error.Message,
+                () => { });
+
+            if (!string.IsNullOrEmpty(errorMessage))
+            {
+                return BadRequest(errorMessage);
+            }
+
+            return Ok(team);
+        }
+
         [HttpGet("{id}/transfers")]
         public IActionResult GetTransfers(int id)
         {

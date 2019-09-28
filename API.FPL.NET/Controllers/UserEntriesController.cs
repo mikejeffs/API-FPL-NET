@@ -175,6 +175,77 @@ namespace API.FPL.NET.Controllers
             return Ok(watchlist);
         }
 
+        [HttpGet("{id}/gameweek/{gameweek}/picks")]
+        [ProducesResponseType(typeof(UserPlayerPicks), 200)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(401)]
+        [Description("Returns a list of player picks made by a user for a given gameweek.")]
+        public async Task<IActionResult> GetPlayerPicksForGameweekAsync(int id, int gameweek)
+        {
+            UserPlayerPicks picks = null;
+            string errorMessage = string.Empty;
+            var result = await _userEntryService.GetPlayerPicksForGameweek(id, gameweek);
+            result.Subscribe(res => picks = res,
+                error => errorMessage = error.Message,
+                () => { });
+
+            if (!string.IsNullOrEmpty(errorMessage))
+            {
+                return BadRequest(errorMessage);
+            }
+
+            if (picks == null)
+            {
+                return NotFound("no_picks_found.");
+            }
+
+            return Ok(picks);
+        }
+
+        [HttpGet("{id}/gameweek/{gameweek}/automatic-substitutions")]
+        [ProducesResponseType(typeof(UserPlayerPicks), 200)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(401)]
+        [Description("Returns a list of any automatic substitutions made in a given gameweek.")]
+        public async Task<IActionResult> GetAutomaticSubstitutionsForGameweekAsync(int id, int gameweek)
+        {
+            UserAutomaticSubstitutions autoSubs = null;
+            string errorMessage = string.Empty;
+            var result = await _userEntryService.GetAutomaticSubstitutionsForGameweek(id, gameweek);
+            result.Subscribe(res => autoSubs = res,
+                error => errorMessage = error.Message,
+                () => { });
+
+            if (!string.IsNullOrEmpty(errorMessage))
+            {
+                return BadRequest(errorMessage);
+            }
+
+            return Ok(autoSubs);
+        }
+
+        [HttpGet("{id}/gameweek/{gameweek}/active-chip")]
+        [ProducesResponseType(typeof(UserActiveChip), 200)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(401)]
+        [Description("Returns the active chip for a users team for a given gameweek.")]
+        public async Task<IActionResult> GetActiveChipForGameweekAsync(int id, int gameweek)
+        {
+            UserActiveChip activeChip = null;
+            string errorMessage = string.Empty;
+            var result = await _userEntryService.GetActiveChipForGameweek(id, gameweek);
+            result.Subscribe(res => activeChip = res,
+                error => errorMessage = error.Message,
+                () => { });
+
+            if (!string.IsNullOrEmpty(errorMessage))
+            {
+                return BadRequest(errorMessage);
+            }
+
+            return Ok(activeChip);
+        }
+
         private async Task<(List<UserTransfer> transfers, string errorMessage)> GetUserTransfers(int id, int? gameweek = null)
         {
             List<UserTransfer> transfers = null;

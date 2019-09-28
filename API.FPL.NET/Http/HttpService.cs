@@ -14,13 +14,34 @@ namespace API.FPL.NET.Http
             var client = new RestClient(url);
             var request = new RestRequest(Method.GET);
             var cancellationTokenSource = new CancellationTokenSource();
-            
-            foreach (var kvp in options.RequestHeaders.GetHeaders())
+
+            if (options != null)
             {
-                request.AddHeader(kvp.Key, kvp.Value);
+                foreach (var kvp in options.RequestHeaders.GetHeaders())
+                {
+                    request.AddHeader(kvp.Key, kvp.Value);
+                }
             }
-            
+
             IRestResponse response = await client.ExecuteGetTaskAsync(request, cancellationTokenSource.Token);
+            return Observable.Start(() => ResponseFactory.Get(response));
+        }
+
+        public async Task<IObservable<IResponse>> Post(string url, object body, IRequestOptions options = null)
+        {
+            var client = new RestClient(url);
+            var request = new RestRequest(Method.POST);
+            var cancellationTokenSource = new CancellationTokenSource();
+
+            if (options != null)
+            {
+                foreach (var kvp in options.RequestHeaders.GetHeaders())
+                {
+                    request.AddHeader(kvp.Key, kvp.Value);
+                }
+            }
+
+            IRestResponse response = await client.ExecutePostTaskAsync(request, cancellationTokenSource.Token);
             return Observable.Start(() => ResponseFactory.Get(response));
         }
     }

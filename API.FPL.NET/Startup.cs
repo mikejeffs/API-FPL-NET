@@ -35,6 +35,7 @@ namespace API.FPL.NET
 
             // Register FPL.NET Services.
             services.AddScoped<UserEntryService>();
+            services.AddScoped<AuthService>();
             services.AddSingleton<IHttpService, HttpService>();
         }
 

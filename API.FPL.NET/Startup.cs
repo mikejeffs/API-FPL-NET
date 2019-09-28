@@ -36,6 +36,7 @@ namespace API.FPL.NET
             // Register FPL.NET Services.
             services.AddScoped<UserEntryService>();
             services.AddScoped<AuthService>();
+            services.AddScoped<ClassicLeagueService>();
             services.AddSingleton<IHttpService, HttpService>();
         }
 

@@ -18,10 +18,27 @@ namespace API.FPL.NET.Http
             };
             foreach (var restResponseCookie in response.Cookies)
             {
-                serviceResponse.CookieJar.Add(new Cookie(restResponseCookie.Name, restResponseCookie.Value, restResponseCookie.Path, restResponseCookie.Domain));
+                serviceResponse.Cookies.Add(new Cookie(restResponseCookie.Name, restResponseCookie.Value, restResponseCookie.Path, restResponseCookie.Domain));
             }
 
             return serviceResponse;
         }
+
+		public static IResponse Post(IRestResponse response)
+		{
+			var serviceResponse = new ServiceResponse
+			{
+				Ok = (response.StatusCode == System.Net.HttpStatusCode.OK),
+				Status = (int)response.StatusCode,
+				Url = response.ResponseUri,
+				Content = response.Content,
+			};
+			foreach (var restResponseCookie in response.Cookies)
+			{
+				serviceResponse.Cookies.Add(new Cookie(restResponseCookie.Name, restResponseCookie.Value, restResponseCookie.Path, restResponseCookie.Domain));
+			}
+
+			return serviceResponse;
+		}
     }
 }

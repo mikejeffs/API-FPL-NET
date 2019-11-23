@@ -25,7 +25,6 @@ C:\Users\Mike\Developer\API.FPL.NET\API.FPL.NET\bin\Debug\netcoreapp2.2\API.FPL.
 C:\Users\Mike\Developer\API.FPL.NET\API.FPL.NET\bin\Debug\netcoreapp2.2\FPL.NET.dll
 C:\Users\Mike\Developer\API.FPL.NET\API.FPL.NET\bin\Debug\netcoreapp2.2\FPL.NET.pdb
 C:\Users\Mike\Developer\API.FPL.NET\API.FPL.NET\obj\Debug\netcoreapp2.2\API.FPL.NET.csprojAssemblyReference.cache
-C:\Users\Mike\Developer\API.FPL.NET\API.FPL.NET\obj\Debug\netcoreapp2.2\API.FPL.NET.csproj.CoreCompileInputs.cache
 C:\Users\Mike\Developer\API.FPL.NET\API.FPL.NET\obj\Debug\netcoreapp2.2\API.FPL.NET.RazorAssemblyInfo.cache
 C:\Users\Mike\Developer\API.FPL.NET\API.FPL.NET\obj\Debug\netcoreapp2.2\API.FPL.NET.RazorAssemblyInfo.cs
 C:\Users\Mike\Developer\API.FPL.NET\API.FPL.NET\obj\Debug\netcoreapp2.2\API.FPL.NET.AssemblyInfoInputs.cache
@@ -34,3 +33,7 @@ C:\Users\Mike\Developer\API.FPL.NET\API.FPL.NET\obj\Debug\netcoreapp2.2\API.FPL.
 C:\Users\Mike\Developer\API.FPL.NET\API.FPL.NET\obj\Debug\netcoreapp2.2\API.FPL.NET.csproj.CopyComplete
 C:\Users\Mike\Developer\API.FPL.NET\API.FPL.NET\obj\Debug\netcoreapp2.2\API.FPL.NET.dll
 C:\Users\Mike\Developer\API.FPL.NET\API.FPL.NET\obj\Debug\netcoreapp2.2\API.FPL.NET.pdb
+C:\Users\Mike\Developer\API.FPL.NET\API.FPL.NET\bin\Debug\netcoreapp2.2\app.config
+C:\Users\Mike\Developer\API.FPL.NET\API.FPL.NET\bin\Debug\netcoreapp2.2\appsettings.Development.json
+C:\Users\Mike\Developer\API.FPL.NET\API.FPL.NET\bin\Debug\netcoreapp2.2\appsettings.json
+C:\Users\Mike\Developer\API.FPL.NET\API.FPL.NET\bin\Debug\netcoreapp2.2\Properties\launchSettings.json

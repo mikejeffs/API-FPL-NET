@@ -40,9 +40,9 @@ namespace API.FPL.NET.Http
                     request.AddHeader(kvp.Key, kvp.Value);
                 }
             }
-
+			client.FollowRedirects = true;
             IRestResponse response = await client.ExecutePostTaskAsync(request, cancellationTokenSource.Token);
-            return Observable.Start(() => ResponseFactory.Get(response));
+            return Observable.Start(() => ResponseFactory.Post(response));
         }
     }
 }

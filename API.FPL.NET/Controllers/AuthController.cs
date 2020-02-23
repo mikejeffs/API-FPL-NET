@@ -35,20 +35,19 @@ namespace API.FPL.NET.Controllers
             Exception err = null;
             User user = null;
             var result = await _authService.Login(login);
-            return Ok("fsfdf");
-            // result.Subscribe((res) =>
-            //     {
-            //         Console.WriteLine(res);
-            //     },
-            //     (error) =>
-            //     {
-            //         err = error;
-            //         Console.WriteLine(error);
-            //     }, () => { });
-            // if (user == null)
-            // {
-            //     BadRequest(err.Message);
-            // }
+            result.Subscribe((res) =>
+                {
+                    Console.WriteLine(res);
+                },
+                (error) =>
+                {
+                    err = error;
+                    Console.WriteLine(error);
+                }, () => { });
+            if (user == null)
+            {
+                BadRequest(err.Message);
+            }
             return Ok(user);
         }
     }

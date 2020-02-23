@@ -11,14 +11,14 @@ namespace API.FPL.NET.Http
         {
             var serviceResponse = new ServiceResponse
             {
-                Ok = (response.StatusCode == System.Net.HttpStatusCode.OK),
+                Ok = (response.StatusCode == HttpStatusCode.OK),
                 Status = (int) response.StatusCode,
                 Url = response.ResponseUri,
                 Content = response.Content,
             };
             foreach (var restResponseCookie in response.Cookies)
             {
-                serviceResponse.Cookies.Add(new Cookie(restResponseCookie.Name, restResponseCookie.Value, restResponseCookie.Path, restResponseCookie.Domain));
+                serviceResponse.CookieJar.Add(new Cookie(restResponseCookie.Name, restResponseCookie.Value, restResponseCookie.Path, restResponseCookie.Domain));
             }
 
             return serviceResponse;
@@ -28,14 +28,14 @@ namespace API.FPL.NET.Http
 		{
 			var serviceResponse = new ServiceResponse
 			{
-				Ok = (response.StatusCode == System.Net.HttpStatusCode.OK),
+				Ok = (response.StatusCode == HttpStatusCode.OK),
 				Status = (int)response.StatusCode,
 				Url = response.ResponseUri,
 				Content = response.Content,
 			};
 			foreach (var restResponseCookie in response.Cookies)
 			{
-				serviceResponse.Cookies.Add(new Cookie(restResponseCookie.Name, restResponseCookie.Value, restResponseCookie.Path, restResponseCookie.Domain));
+				serviceResponse.CookieJar.Add(new Cookie(restResponseCookie.Name, restResponseCookie.Value, restResponseCookie.Path, restResponseCookie.Domain));
 			}
 
 			return serviceResponse;

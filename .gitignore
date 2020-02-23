@@ -34,3 +34,15 @@ API.FPL.NET/obj/Debug/netcoreapp2.2/TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B5
 API.FPL.NET/bin/Debug/netcoreapp2.2/API.FPL.NET.dll
 API.FPL.NET/obj/Debug/netcoreapp2.2/API.FPL.NET.assets.cache
 *.props
+API.FPL.NET/obj/project.packagespec.json
+API.FPL.NET/obj/project.assets.json
+API.FPL.NET/obj/Debug/netcoreapp2.2/API.FPL.NET.csprojAssemblyReference.cache
+API.FPL.NET/obj/Debug/netcoreapp2.2/API.FPL.NET.assets.cache
+API.FPL.NET/obj/API.FPL.NET.csproj.nuget.g.targets
+API.FPL.NET/obj/API.FPL.NET.csproj.nuget.g.props
+API.FPL.NET/obj/API.FPL.NET.csproj.nuget.dgspec.json
+API.FPL.NET/obj/API.FPL.NET.csproj.nuget.cache
+.idea/.idea.API.FPL.NET/.idea/workspace.xml
+.idea/.idea.API.FPL.NET/.idea/vcs.xml
+.idea/.idea.API.FPL.NET/.idea/projectSettingsUpdater.xml
+.idea/.idea.API.FPL.NET/.idea/contentModel.xml

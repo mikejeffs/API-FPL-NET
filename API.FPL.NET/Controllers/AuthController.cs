@@ -22,7 +22,7 @@ namespace API.FPL.NET.Controllers
 
 
         [HttpPost("login")]
-        // [ProducesResponseType(typeof(string), 200)]
+        [ProducesResponseType(typeof(string), 200)]
         [ProducesResponseType(400)]
         [Description("Authenticates a logged in user to access certain endpoints.")]
         public async Task<IActionResult> Login(LoginDto login)
@@ -33,22 +33,19 @@ namespace API.FPL.NET.Controllers
             }
 
             Exception err = null;
-            User user = null;
+            string authStatus = string.Empty;
             var result = await _authService.Login(login);
-            result.Subscribe((res) =>
-                {
-                    Console.WriteLine(res);
-                },
+            result.Subscribe((res) => { authStatus = res; },
                 (error) =>
                 {
                     err = error;
                     Console.WriteLine(error);
                 }, () => { });
-            if (user == null)
+            if (err != null)
             {
-                BadRequest(err.Message);
+                return BadRequest(err.Message);
             }
-            return Ok(user);
+            return Ok(authStatus);
         }
     }
 }

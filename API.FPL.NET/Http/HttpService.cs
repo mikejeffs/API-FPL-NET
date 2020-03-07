@@ -8,6 +8,7 @@ using System.Reactive.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using FPL.NET.Exceptions;
+using FPL.NET.Extensions;
 using FPL.NET.Http;
 using RestSharp;
 
@@ -15,18 +16,18 @@ namespace API.FPL.NET.Http
 {
     public sealed class HttpService : IHttpService
     {
-        private static readonly CookieContainer CookieJar = new CookieContainer();
-        private static readonly HttpClient Client;
+        private readonly CookieContainer _cookieJar = new CookieContainer();
+        private readonly HttpClient _client;
 
-        static HttpService()
+        public HttpService()
         {
             var httpClientHandler = new HttpClientHandler
             {
-                CookieContainer = CookieJar,
+                CookieContainer = _cookieJar,
                 UseCookies = true,
                 UseDefaultCredentials = false
             };
-            Client = new HttpClient(httpClientHandler);
+            _client = new HttpClient(httpClientHandler);
         }
         
         
@@ -49,9 +50,9 @@ namespace API.FPL.NET.Http
             var cancellationTokenSource = new CancellationTokenSource();
             
             HttpResponseMessage response =
-                await Client.SendAsync(request, cancellationTokenSource.Token);
+                await _client.SendAsync(request, cancellationTokenSource.Token);
             
-            List<Cookie> cookies = CookieJar.GetCookies(request.RequestUri).Cast<Cookie>().ToList();
+            List<Cookie> cookies = _cookieJar.GetCookies(request.RequestUri).Cast<Cookie>().ToList();
             
             string responseContentString = await response.Content.ReadAsStringAsync();
             
@@ -64,6 +65,7 @@ namespace API.FPL.NET.Http
             {
                 RequestUri = new Uri(url, UriKind.Absolute),
                 Method = HttpMethod.Post,
+                Content = (HttpContent) body,
             };
 
             if (headers != null)
@@ -77,9 +79,9 @@ namespace API.FPL.NET.Http
             var cancellationTokenSource = new CancellationTokenSource();
             
             HttpResponseMessage response =
-                await Client.SendAsync(request, cancellationTokenSource.Token);
-            
-            List<Cookie> cookies = CookieJar.GetCookies(request.RequestUri).Cast<Cookie>().ToList();
+                await _client.SendAsync(request, cancellationTokenSource.Token);
+
+            List<Cookie> cookies = _cookieJar.GetAllCookies(); // .GetCookies(request.RequestUri).Cast<Cookie>().ToList();
             bool verifiedCookies = VerifyAuthCookies(cookies, "sessionid", "pl_profile", "csrftoken");
             if (!verifiedCookies)
             {

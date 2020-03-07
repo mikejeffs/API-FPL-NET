@@ -45,19 +45,15 @@ namespace API.FPL.NET.Controllers
         [Description("Returns a Users previous season data from the specified id if one exists.")]
         public async Task<IActionResult> GetSeasonHistory(int id)
         {
-            UserHistory seasonHistory = null;
-            string errorMessage = string.Empty;
-            var result = await _userEntryService.GetUserSeasonHistory(id);
-                result.Subscribe(res => { seasonHistory = res; },
-                (error) => { errorMessage = error.Message; },
-                () => { });
-
-            if (!string.IsNullOrEmpty(errorMessage))
+            try
             {
-                return BadRequest(errorMessage);
+                UserHistory result = await _userEntryService.GetUserSeasonHistory(id);
+                return Ok(result);
             }
-
-            return Ok(seasonHistory);
+            catch (FplException ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpGet("{id}/game-week/{eventId}/picks")]
@@ -66,19 +62,15 @@ namespace API.FPL.NET.Controllers
         [Description("Returns a the team selections made by the user for a given game week.")]
         public async Task<IActionResult> GetPicksForEvent(int id, int eventId)
         {
-            UserEventPicks picks = null;
-            string errorMessage = string.Empty;
-            var result = await _userEntryService.GetUserPlayerPicksForEvent(id, eventId);
-            result.Subscribe(res => picks = res,
-                error => errorMessage = error.Message,
-                () => { });
-
-            if (!string.IsNullOrEmpty(errorMessage))
+            try
             {
-                return BadRequest(errorMessage);
+                UserEventPicks result = await _userEntryService.GetUserPlayerPicksForEvent(id, eventId);
+                return Ok(result);
             }
-
-            return Ok(picks);
+            catch (FplException ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpGet("{id}/team")]
@@ -87,20 +79,15 @@ namespace API.FPL.NET.Controllers
         [Description("Returns the users current fantasy team, as well as any transfers made, and chips.")]
         public async Task<IActionResult> GetUserTeam(int id)
         {
-            UserTeam team = null;
-            string errorMessage = string.Empty;
-            var result = await _userEntryService.GetUserTeam(id);
-            result.Subscribe(res => team = res,
-                error => errorMessage = error.Message,
-                () => { });
-           
-
-            if (!string.IsNullOrEmpty(errorMessage))
+            try
             {
-                return BadRequest(errorMessage);
+                UserTeam result = await _userEntryService.GetUserTeam(id);
+                return Ok(result);
             }
-
-            return Ok(team);
+            catch (FplException ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpGet("{id}/transfers")]
@@ -109,14 +96,24 @@ namespace API.FPL.NET.Controllers
         [Description("Returns the transfer history for a given users fantasy team.")]
         public async Task<IActionResult> GetTransfers(int id)
         {
-            (List<UserTransfer> transfers, string errorMessage) = await GetUserTransfers(id);
-
-            if (transfers == null)
+            try
             {
-                return BadRequest(errorMessage);
+                List<UserTransfer> result = await _userEntryService.GetUserTransfers(id);
+                return Ok(result);
             }
-
-            return Ok(transfers);
+            catch (FplException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            
+            // (List<UserTransfer> transfers, string errorMessage) = await GetUserTransfers(id);
+            //
+            // if (transfers == null)
+            // {
+            //     return BadRequest(errorMessage);
+            // }
+            //
+            // return Ok(transfers);
         }
 
         // Endpoint not working, disabled for now.
@@ -126,14 +123,15 @@ namespace API.FPL.NET.Controllers
         [Description("Returns the transfer history for a given users fantasy team.")]
         public async Task<IActionResult> GetTransfersForGameweek(int id, int gameweek)
         {
-            (List<UserTransfer> transfers, string errorMessage) = await GetUserTransfers(id, gameweek);
-
-            if (transfers == null)
+            try
             {
-                return BadRequest(errorMessage);
+                List<UserTransfer> result = await _userEntryService.GetUserTransfers(id, gameweek);
+                return Ok(result);
             }
-
-            return Ok(transfers);
+            catch (FplException ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpGet("{id}/cup")]
@@ -152,19 +150,15 @@ namespace API.FPL.NET.Controllers
         [Description("Returns your player watchlist. You must be logged in to retrieve the data from this endpoint.")]
         public async Task<IActionResult> GetWatchlist()
         {
-            UserPlayerWatchlist watchlist = null;
-            string errorMessage = string.Empty;
-            var result = await _userEntryService.GetUserWatchlist();
-            result.Subscribe(res => watchlist = res,
-                error => errorMessage = error.Message,
-                () => { });
-
-            if (!string.IsNullOrEmpty(errorMessage))
+            try
             {
-                return BadRequest(errorMessage);
+                UserPlayerWatchlist result = await _userEntryService.GetUserWatchlist();
+                return Ok(result);
             }
-
-            return Ok(watchlist);
+            catch (FplException ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpGet("{id}/gameweek/{gameweek}/picks")]
@@ -174,24 +168,15 @@ namespace API.FPL.NET.Controllers
         [Description("Returns a list of player picks made by a user for a given gameweek.")]
         public async Task<IActionResult> GetPlayerPicksForGameweekAsync(int id, int gameweek)
         {
-            UserPlayerPicks picks = null;
-            string errorMessage = string.Empty;
-            var result = await _userEntryService.GetPlayerPicksForGameweek(id, gameweek);
-            result.Subscribe(res => picks = res,
-                error => errorMessage = error.Message,
-                () => { });
-
-            if (!string.IsNullOrEmpty(errorMessage))
+            try
             {
-                return BadRequest(errorMessage);
+                UserPlayerPicks result = await _userEntryService.GetPlayerPicksForGameweek(id, gameweek);
+                return Ok(result);
             }
-
-            if (picks == null)
+            catch (FplException ex)
             {
-                return NotFound("no_picks_found.");
+                return BadRequest(ex.Message);
             }
-
-            return Ok(picks);
         }
 
         [HttpGet("{id}/gameweek/{gameweek}/automatic-substitutions")]
@@ -201,19 +186,15 @@ namespace API.FPL.NET.Controllers
         [Description("Returns a list of any automatic substitutions made in a given gameweek.")]
         public async Task<IActionResult> GetAutomaticSubstitutionsForGameweekAsync(int id, int gameweek)
         {
-            UserAutomaticSubstitutions autoSubs = null;
-            string errorMessage = string.Empty;
-            var result = await _userEntryService.GetAutomaticSubstitutionsForGameweek(id, gameweek);
-            result.Subscribe(res => autoSubs = res,
-                error => errorMessage = error.Message,
-                () => { });
-
-            if (!string.IsNullOrEmpty(errorMessage))
+            try
             {
-                return BadRequest(errorMessage);
+                UserAutomaticSubstitutions result = await _userEntryService.GetAutomaticSubstitutionsForGameweek(id, gameweek);
+                return Ok(result);
             }
-
-            return Ok(autoSubs);
+            catch (FplException ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpGet("{id}/gameweek/{gameweek}/active-chip")]
@@ -223,32 +204,15 @@ namespace API.FPL.NET.Controllers
         [Description("Returns the active chip for a users team for a given gameweek.")]
         public async Task<IActionResult> GetActiveChipForGameweekAsync(int id, int gameweek)
         {
-            UserActiveChip activeChip = null;
-            string errorMessage = string.Empty;
-            var result = await _userEntryService.GetActiveChipForGameweek(id, gameweek);
-            result.Subscribe(res => activeChip = res,
-                error => errorMessage = error.Message,
-                () => { });
-
-            if (!string.IsNullOrEmpty(errorMessage))
+            try
             {
-                return BadRequest(errorMessage);
+                UserActiveChip result = await _userEntryService.GetActiveChipForGameweek(id, gameweek);
+                return Ok(result);
             }
-
-            return Ok(activeChip);
-        }
-
-        private async Task<(List<UserTransfer> transfers, string errorMessage)> GetUserTransfers(int id, int? gameweek = null)
-        {
-            List<UserTransfer> transfers = null;
-            string errorMessage = string.Empty;
-
-            var result = await _userEntryService.GetUserTransfers(id, gameweek);
-            result.Subscribe(res => transfers = res,
-                error => errorMessage = error.Message,
-                () => { });
-
-            return (transfers, errorMessage);
+            catch (FplException ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
     }
 }

@@ -31,7 +31,27 @@ namespace API.FPL.NET
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
             // Register the Swagger services
-            services.AddSwaggerDocument();
+            services.AddSwaggerDocument(config =>
+            {
+                config.PostProcess = document =>
+                {
+                    document.Info.Version = "v1";
+                    document.Info.Title = "FPL.NET";
+                    document.Info.Description = "An API wrapper written in C# for Fantasy Premier League";
+                    document.Info.TermsOfService = "None";
+                    document.Info.Contact = new NSwag.OpenApiContact
+                    {
+                        Name = "Mike Pratt",
+                        Email = string.Empty,
+                        Url = "https://github.com/mike-pratt"
+                    };
+                    document.Info.License = new NSwag.OpenApiLicense
+                    {
+                        Name = "MIT",
+                        Url = "https://example.com/license"
+                    };
+                };
+            });
 
             // Register FPL.NET Services.
             services.AddScoped<UserEntryService>();

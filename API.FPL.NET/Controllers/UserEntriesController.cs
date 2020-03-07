@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Threading.Tasks;
+using FPL.NET.Exceptions;
 using FPL.NET.Models.User;
 using FPL.NET.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -27,24 +28,15 @@ namespace API.FPL.NET.Controllers
         [Description("Returns a User from the specified id if one exists.")]
         public async Task<IActionResult> Get(int id)
         {
-            Exception err = null;
-            User user = null;
-            var result = await _userEntryService.GetUserEntry(id);
-            result.Subscribe((res) =>
+            try
             {
-                user = res;
-                Console.WriteLine(user);
-            },
-            (error) =>
-            {
-                err = error;
-                Console.WriteLine(error);
-            }, () => { });
-            if (user == null)
-            {
-                BadRequest(err.Message);
+                User user = await _userEntryService.GetUserEntry(id);
+                return Ok(user);
             }
-            return Ok(user);
+            catch (FplException ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpGet("{id}/history")]

@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Threading.Tasks;
+using FPL.NET.Exceptions;
 using FPL.NET.Models.League;
 using FPL.NET.Services;
 using Microsoft.AspNetCore.Http;
@@ -22,21 +24,21 @@ namespace API.FPL.NET.Controllers
         }
 
         [HttpGet("classic/{id}/standings")]
+        [ProducesResponseType(typeof(ClassicLeagueMapping), 200)]
+        [ProducesResponseType(400)]
+        [Description("Returns a classic leagues current standings.")]
         public async Task<IActionResult> GetClassicLeagueStandings(int id)
         {
-            ClassicLeagueMapping league = null;
-            string errorMessage = string.Empty;
-            var result = await _classicLeagueService.GetStandings(id);
-            result.Subscribe(res => league = res,
-                error => errorMessage = error.Message,
-                () => { });
-
-            if (!string.IsNullOrEmpty(errorMessage))
+            try
             {
-                return BadRequest(errorMessage);
+                ClassicLeagueMapping league = await _classicLeagueService.GetStandings(id);
+                return Ok(league);
             }
-
-            return Ok(league);
+            catch (FplException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            
         }
     }
 }

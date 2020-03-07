@@ -91,23 +91,6 @@ namespace API.FPL.NET.Http
             string responseContentString = await response.Content.ReadAsStringAsync();
             
             return Observable.Start(() => ResponseFactory.Get(response, responseContentString, cookies));
-            
-            
-   //          Uri uri = new Uri(url, UriKind.Absolute);
-   //          var client = new RestClient(uri);
-   //          var request = new RestRequest(Method.POST);
-   //          var cancellationTokenSource = new CancellationTokenSource();
-   //
-   //          if (options != null)
-   //          {
-   //              foreach (var kvp in options.RequestHeaders.GetHeaders())
-   //              {
-   //                  request.AddHeader(kvp.Key, kvp.Value);
-   //              }
-   //          }
-			// client.FollowRedirects = true;
-   //          IRestResponse response = await client.ExecutePostTaskAsync(request, cancellationTokenSource.Token);
-   //          return Observable.Start(() => ResponseFactory.Post(response));
         }
         
         private bool VerifyAuthCookies(List<Cookie> usersCookies, params string[] cookieNames)

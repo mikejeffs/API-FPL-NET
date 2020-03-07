@@ -1,8 +1,7 @@
-﻿using System;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Threading.Tasks;
+using FPL.NET.Exceptions;
 using FPL.NET.Models.DataTransferObjects;
-using FPL.NET.Models.User;
 using FPL.NET.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -27,25 +26,20 @@ namespace API.FPL.NET.Controllers
         [Description("Authenticates a logged in user to access certain endpoints.")]
         public async Task<IActionResult> Login(LoginDto login)
         {
-            if (string.IsNullOrEmpty(login.Login) || string.IsNullOrEmpty(login.Password))
+            try
             {
-                return BadRequest("no_email_or_password_provided");
-            }
-
-            Exception err = null;
-            string authStatus = string.Empty;
-            var result = await _authService.Login(login);
-            result.Subscribe((res) => { authStatus = res; },
-                (error) =>
+                if (string.IsNullOrEmpty(login.Login) || string.IsNullOrEmpty(login.Password))
                 {
-                    err = error;
-                    Console.WriteLine(error);
-                }, () => { });
-            if (err != null)
-            {
-                return BadRequest(err.Message);
+                    return BadRequest("no_email_or_password_provided");
+                }
+
+                string result = await _authService.Login(login);
+                return Ok(result);
             }
-            return Ok(authStatus);
+            catch (FplException ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
     }
 }

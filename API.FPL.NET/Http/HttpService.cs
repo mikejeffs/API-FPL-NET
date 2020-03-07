@@ -48,11 +48,11 @@ namespace API.FPL.NET.Http
             }
             
             var cancellationTokenSource = new CancellationTokenSource();
-            
+            List<Cookie> cookies = _cookieJar.GetAllCookies();
+
             HttpResponseMessage response =
                 await _client.SendAsync(request, cancellationTokenSource.Token);
-            
-            List<Cookie> cookies = _cookieJar.GetCookies(request.RequestUri).Cast<Cookie>().ToList();
+
             
             string responseContentString = await response.Content.ReadAsStringAsync();
             

@@ -22,7 +22,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\FPL.NET\FPL.NET\FPL.NET.csproj" />
+      <ProjectReference Include="..\FPL.NET\FPL.NET\FPL.NET.csproj" />
     </ItemGroup>
     <ItemGroup>
       <Folder Include="Http\" />

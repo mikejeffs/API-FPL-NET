@@ -78,7 +78,7 @@ namespace API.FPL.NET
             app.UseOpenApi();
             app.UseSwaggerUi3();
             
-            app.UseMvc();
+            // app.UseMvc();
         }
     }
 }

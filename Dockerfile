@@ -3,7 +3,7 @@ WORKDIR /app
 EXPOSE 80
 
 # docker images are just layers upon one another, so the command below defines the base image for which our instructions derive from.
-FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
 WORKDIR /src
 ARG BUILDCONFIG=RELEASE
 ARG VERSION=0.0.1

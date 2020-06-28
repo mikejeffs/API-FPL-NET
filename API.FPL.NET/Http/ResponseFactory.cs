@@ -11,11 +11,13 @@ namespace API.FPL.NET.Http
         {
 	        var serviceResponse = new ServiceResponse
             {
-                Ok = (response.StatusCode == HttpStatusCode.OK),
+                Ok = response.StatusCode == HttpStatusCode.OK,
                 Status = (int) response.StatusCode,
                 Url = response.RequestMessage.RequestUri,
                 Content = content,
             };
+            
+            cookies ??= new List<Cookie>();
             
             foreach (var restResponseCookie in cookies)
             {

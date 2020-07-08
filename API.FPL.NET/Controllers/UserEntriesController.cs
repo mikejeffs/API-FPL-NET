@@ -118,24 +118,24 @@ namespace API.FPL.NET.Controllers
 
         // Endpoint not working, disabled for now.
         // [HttpGet("{id}/transfers/{gameweek}")]
-        [ProducesResponseType(typeof(List<UserTransfer>), 200)]
-        [ProducesResponseType(400)]
-        [Description("Returns the transfer history for a given users fantasy team.")]
-        public async Task<IActionResult> GetTransfersForGameweek(int id, int gameweek)
-        {
-            try
-            {
-                List<UserTransfer> result = await _userEntryService.GetUserTransfers(id, gameweek);
-                return Ok(result);
-            }
-            catch (FplException ex)
-            {
-                return BadRequest(ex.Message);
-            }
-        }
+        // [ProducesResponseType(typeof(List<UserTransfer>), 200)]
+        // [ProducesResponseType(400)]
+        // [Description("Returns the transfer history for a given users fantasy team.")]
+        // public async Task<IActionResult> GetTransfersForGameweek(int id, int gameweek)
+        // {
+        //     try
+        //     {
+        //         List<UserTransfer> result = await _userEntryService.GetUserTransfers(id, gameweek);
+        //         return Ok(result);
+        //     }
+        //     catch (FplException ex)
+        //     {
+        //         return BadRequest(ex.Message);
+        //     }
+        // }
 
         [HttpGet("{id}/cup")]
-        // [ProducesResponseType(typeof(User), 200)]
+        [ProducesResponseType(typeof(User), 200)]
         [ProducesResponseType(400)]
         [Description("Returns the current seasons cup history for a given user.")]
         public IActionResult GetCups(int id)

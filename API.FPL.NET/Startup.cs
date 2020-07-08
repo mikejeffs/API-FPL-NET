@@ -58,7 +58,11 @@ namespace API.FPL.NET
             services.AddScoped<UserEntryService>();
             services.AddScoped<AuthService>();
             services.AddScoped<ClassicLeagueService>();
-            services.AddSingleton<IHttpService, HttpService>();
+            // services.AddSingleton<IHttpService, HttpService>();
+            services.AddHttpClient<UserEntryService>();
+            services.AddHttpClient<AuthService>();
+            services.AddHttpClient<ClassicLeagueService>();
+            services.AddHealthChecks();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -78,8 +82,11 @@ namespace API.FPL.NET
             // Register the Swagger generator and the Swagger UI middlewares
             app.UseOpenApi();
             app.UseSwaggerUi3();
-            
-            // app.UseMvc();
+            app.UseRouting();
+            app.UseEndpoints(endpoints => {
+                endpoints.MapControllers();
+                endpoints.MapHealthChecks("/health");
+            });
         }
     }
 }

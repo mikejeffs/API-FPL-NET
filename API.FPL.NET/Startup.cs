@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
 using System.Threading.Tasks;
 using API.FPL.NET.Http;
 using FPL.NET.Http;
@@ -59,9 +61,18 @@ namespace API.FPL.NET
             services.AddScoped<AuthService>();
             services.AddScoped<ClassicLeagueService>();
             // services.AddSingleton<IHttpService, HttpService>();
-            services.AddHttpClient<UserEntryService>();
-            services.AddHttpClient<AuthService>();
-            services.AddHttpClient<ClassicLeagueService>();
+            var httpClientHandler = new HttpClientHandler
+            {
+                CookieContainer = new CookieContainer(),
+                UseCookies = true,
+                UseDefaultCredentials = false
+            };
+            services.AddHttpClient<UserEntryService>()
+                .ConfigurePrimaryHttpMessageHandler(() => httpClientHandler);
+            services.AddHttpClient<AuthService>()
+                .ConfigurePrimaryHttpMessageHandler(() => httpClientHandler);
+            services.AddHttpClient<ClassicLeagueService>()
+                .ConfigurePrimaryHttpMessageHandler(() => httpClientHandler);
             services.AddHealthChecks();
         }
 

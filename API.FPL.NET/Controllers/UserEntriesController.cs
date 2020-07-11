@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Threading.Tasks;
 using FPL.NET.Exceptions;
+using FPL.NET.Models.Cup;
 using FPL.NET.Models.User;
 using FPL.NET.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -135,12 +136,20 @@ namespace API.FPL.NET.Controllers
         // }
 
         [HttpGet("{id}/cup")]
-        [ProducesResponseType(typeof(User), 200)]
+        [ProducesResponseType(typeof(Cup), 200)]
         [ProducesResponseType(400)]
         [Description("Returns the current seasons cup history for a given user.")]
-        public IActionResult GetCups(int id)
+        public async Task<IActionResult> GetUserCupStatusAsync(int id)
         {
-            throw new NotImplementedException("Endpoint not found, so cannot implement this yet!");
+			try
+			{
+				Cup cup = await _userEntryService.GetUserCupStatus(id); // TODO: Returns null for cup status and cup matches properties.
+				return Ok(cup);
+			}
+			catch (Exception ex)
+			{
+				return BadRequest(ex.Message);
+			}
         }
 
         [HttpGet("watchlist")]

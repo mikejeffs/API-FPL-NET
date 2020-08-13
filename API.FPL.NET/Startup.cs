@@ -36,7 +36,7 @@ namespace API.FPL.NET
                     {
                         Name = "Mike Pratt",
                         Email = string.Empty,
-                        Url = "https://github.com/mike-pratt"
+                        Url = "https://mikesjp.dev"
                     };
                     document.Info.License = new NSwag.OpenApiLicense
                     {

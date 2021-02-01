@@ -23,7 +23,7 @@ build:
     - docker save -o api-fpl-net.tar api-fpl-net:latest
   artifacts:
     paths:
-      api-fpl-net.tar
+      - api-fpl-net.tar
 
 test:
   stage: test

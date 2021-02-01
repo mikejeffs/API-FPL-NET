@@ -1,6 +1,6 @@
-FROM mcr.microsoft.com/dotnet/core/aspnet:2.2 AS base
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS base
 WORKDIR /app
-EXPOSE 80
+EXPOSE 5000
 
 # docker images are just layers upon one another, so the command below defines the base image for which our instructions derive from.
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build

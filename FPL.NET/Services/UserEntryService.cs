@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -40,10 +41,17 @@ namespace FPL.NET.Services
         /// <returns></returns>
         public async Task<UserHistory> GetUserSeasonHistory(int id)
         {
-			SetHeaders();
-			var response = await _httpClient.GetAsync($"{_baseApiUrl}/{id}/history");
-			string result = await response.Content.ReadAsStringAsync();
-			return DeserialiseObject<UserHistory>(result);
+	        try
+	        {
+		        SetHeaders();
+		        var response = await _httpClient.GetAsync($"{_baseApiUrl}/{id}/history");
+		        string result = await response.Content.ReadAsStringAsync();
+		        return DeserialiseObject<UserHistory>(result);
+	        }
+	        catch (Exception ex)
+	        {
+		        throw ex;
+	        }
         }
 
         // entry/{id}/event/{eventId}/picks

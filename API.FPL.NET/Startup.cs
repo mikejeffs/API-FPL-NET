@@ -80,6 +80,8 @@ namespace API.FPL.NET
                 app.UseHttpsRedirection();
             }
 
+            app.UseFileServer();
+
             // Register the Swagger generator and the Swagger UI middlewares
             app.UseOpenApi();
             app.UseSwaggerUi3();

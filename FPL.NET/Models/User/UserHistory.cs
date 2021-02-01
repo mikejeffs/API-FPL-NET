@@ -15,7 +15,7 @@
         /// <summary>
         /// An array of chips used by the user over the course of the current season.
         /// </summary>
-        public object[] Chips { get; set; }
+        // public object[] Chips { get; set; }
 
         public class History
         {

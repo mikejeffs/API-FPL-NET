@@ -3,17 +3,13 @@ image: docker:latest
 services:
   - docker:dind
 
-variables:
-  DOCKER_LOGIN_USER: ""
-  DOCKER_LOGIN_PASSWORD: ""
-
 stages:
   - build
   - test
   - publish
 
 before_script:
-  - docker login --username ${DOCKER_LOGIN_USER} registry.gitlab.com
+  - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
 
 build:
   stage: build

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
+using FPL.NET.Models;
 using FPL.NET.Models.Cup;
 using FPL.NET.Models.User;
 
@@ -156,10 +157,48 @@ namespace FPL.NET.Services
 			return DeserialiseObject<UserPlayerPicks>(result);
 		}
 
-        // TODO: get_chips_history - returns {} at the moment.
+        /// <summary>
+        /// Returns the logged in users chip history for the current season.
+        /// </summary>
+        /// <returns></returns>
+        public async Task<List<Chip>> GetChips(int id)
+        {
+	        SetHeaders();
+	        var response = await _httpClient.GetAsync($"{_userTeamEndpoint}/{id}"); // TODO: Not tested & endpoint not implemented
+	        string result = await response.Content.ReadAsStringAsync();
+	        return DeserialiseObject<List<Chip>>(result);
+        }
+        
+        /// <summary>
+        /// Returns a users chip usage history.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="gameweek"></param>
+        /// <returns></returns>
+        public async Task<List<Chip>> GetChipsHistory(int id, int? gameweek = null)
+        {
+	        SetHeaders();
+	        var response = await _httpClient.GetAsync($"{_baseApiUrl}/{id}/history"); // TODO: Not tested & endpoint not implemented
+	        string result = await response.Content.ReadAsStringAsync();
+	        return DeserialiseObject<List<Chip>>(result);
+        }
+        
+        /// <summary>
+        /// Returns a list of transfers made by the logged in user for the current gameweek yet to be played.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public async Task<List<UserTransfer>> GetLatestTransfers(int id)
+        {
+	        SetHeaders();
+	        var response = await _httpClient.GetAsync($"{_baseApiUrl}/{id}/transfers-latest"); // TODO: Not tested & endpoint not implemented
+	        string result = await response.Content.ReadAsStringAsync();
+	        return DeserialiseObject<List<UserTransfer>>(result);
+        }
+
         // TODO: get_gameweek_history - returns {} at the moment.
         // TODO: get_season_history - returns {} at the moment.
-        // TODO: get_latest_transfers() - Requires login functionality to work.
+
         // TODO: set_captain - Requires post to work.
         // TODO: set_transfer - Requires post to work.
         // TODO: set_substitute - Requires post to work.

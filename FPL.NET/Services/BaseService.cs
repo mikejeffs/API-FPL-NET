@@ -8,14 +8,13 @@ namespace FPL.NET.Services
     public abstract class BaseService
     {
         protected HttpClient _httpClient;
-        protected JsonSerializerSettings _serializerSettings;
         protected IDictionary<string, string> _headers;
         protected string _baseApiUrl = @"https://fantasy.premierleague.com/api/";
         
         protected BaseService(HttpClient httpClient)
         {
             _httpClient = httpClient;
-            _serializerSettings = new JsonSerializerSettings
+            JsonConvert.DefaultSettings = () => new JsonSerializerSettings
             {
                 NullValueHandling = NullValueHandling.Ignore,
                 ContractResolver = new DefaultContractResolver
@@ -23,6 +22,7 @@ namespace FPL.NET.Services
                     NamingStrategy = new SnakeCaseNamingStrategy()
                 }
             };
+            
             _headers = new Dictionary<string, string>
             {
                 // { "Content-Type", "application/json" },

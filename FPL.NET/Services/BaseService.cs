@@ -10,6 +10,7 @@ namespace FPL.NET.Services
         protected HttpClient _httpClient;
         protected IDictionary<string, string> _headers;
         protected string _baseApiUrl = @"https://fantasy.premierleague.com/api/";
+        protected readonly string _bootstrapStaticUrl;
         
         protected BaseService(HttpClient httpClient)
         {
@@ -28,6 +29,8 @@ namespace FPL.NET.Services
                 // { "Content-Type", "application/json" },
                 { "Accept", "application/json" }
             };
+
+            _bootstrapStaticUrl = _baseApiUrl + "bootstrap-static/";
         }
 
         protected T DeserialiseObject<T>(string json)

@@ -63,6 +63,8 @@ namespace API.FPL.NET
                 .ConfigurePrimaryHttpMessageHandler(() => httpClientHandler);
             services.AddHttpClient<ClassicLeagueService>()
                 .ConfigurePrimaryHttpMessageHandler(() => httpClientHandler);
+            services.AddHttpClient<FixtureService>()
+                .ConfigurePrimaryHttpMessageHandler(() => httpClientHandler);
             services.AddHealthChecks();
         }
 

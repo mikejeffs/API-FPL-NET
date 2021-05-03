@@ -22,18 +22,10 @@ namespace FPL.NET.Services
         public async Task<ClassicLeagueMapping> GetStandings(int id, int pageNewEntries = 1, int pageStandings = 1,
             int phase = 1)
         {
-            // var response = await _httpService.Get($"{_baseApiUrl}{id}/standings?page_new_entries={pageNewEntries}" +
-            //                                       $"&page_standings={pageStandings}" +
-            //                                       $"&phase={phase}", _headers);
-            //
-            // ClassicLeagueMapping classicLeague = null;
-            // response.Subscribe(res => classicLeague = DeserialiseObject<ClassicLeagueMapping>(res.Content),
-            //     error => throw new FplException(error.Message));
-            // response.Wait();
-            //
-            // return classicLeague;
-
-            return null;
+            SetHeaders();
+            var response = await _httpClient.GetAsync($"{_baseApiUrl}{id}/standings?page_new_entries={pageNewEntries}&page_standings={pageStandings}&phase={phase}");
+            string data = await response.Content.ReadAsStringAsync();
+            return DeserialiseObject<ClassicLeagueMapping>(data);
         }
     }
 }

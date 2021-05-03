@@ -38,10 +38,5 @@ namespace FPL.NET.Models.League
         /// The gameweek in which the league is to start operating.
         /// </summary>
         public string StartEvent { get; set; }
-
-        /// <summary>
-        /// Gets or sets the users that belong to this classic league.
-        /// </summary>
-        public ClassicLeagueMapping.ClassicLeagueStandings Standings { get; set; }
     }
 }

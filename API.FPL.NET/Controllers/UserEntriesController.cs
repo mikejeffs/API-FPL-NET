@@ -40,7 +40,7 @@ namespace API.FPL.NET.Controllers
             }
         }
 
-        [HttpGet("{id}/history")]
+        [HttpGet("{id}/season-history")]
         [ProducesResponseType(typeof(UserHistory), 200)]
         [ProducesResponseType(400)]
         [Description("Returns a Users previous season data from the specified id if one exists.")]
@@ -217,6 +217,24 @@ namespace API.FPL.NET.Controllers
             {
                 UserActiveChip result = await _userEntryService.GetActiveChipForGameweek(id, gameweek);
                 return Ok(result);
+            }
+            catch (FplException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        
+        [HttpGet("{id}/gameweek-history")]
+        [ProducesResponseType(typeof(string), 200)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(401)]
+        [Description("Returns the history (points, etc.) of each gameweek in the current season for the user.")]
+        public async Task<IActionResult> GetGameweekHistory(int id)
+        {
+            try
+            {
+                UserGameweekHistory data = await _userEntryService.GetGameweekHistory(id);
+                return Ok(data);
             }
             catch (FplException ex)
             {

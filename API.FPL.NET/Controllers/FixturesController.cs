@@ -57,7 +57,7 @@ namespace API.FPL.NET.Controllers
             }
         }
         
-        [HttpGet("{fixtureId}")]
+        [HttpGet("{fixtureId}/stats")]
         [ProducesResponseType(typeof(FixtureStats), 200)]
         [ProducesResponseType(400)]
         [Description("Returns a list of fixture stats for a given fixture based on the stat identifier provided." +

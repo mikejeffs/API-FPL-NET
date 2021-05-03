@@ -3,11 +3,6 @@
     public class UserHistory
     {
         /// <summary>
-        /// Users history for the current season in play.
-        /// </summary>
-        public History[] Current { get; set; }
-
-        /// <summary>
         /// Collection of data of the users previous season(s) performance.
         /// </summary>
         public History[] Past { get; set; }

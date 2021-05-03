@@ -26,7 +26,7 @@ namespace FPL.NET.Services
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public async Task<User>GetUserEntry(int id)
+        public async Task<User> GetUserEntry(int id)
         {
 			SetHeaders();
             var response = await _httpClient.GetAsync($"{_baseApiUrl}{id}/");
@@ -196,8 +196,14 @@ namespace FPL.NET.Services
 	        return DeserialiseObject<List<UserTransfer>>(result);
         }
 
-        // TODO: get_gameweek_history - returns {} at the moment.
-        // TODO: get_season_history - returns {} at the moment.
+        public async Task<UserGameweekHistory> GetGameweekHistory(int id)
+        {
+	        SetHeaders();
+	        var response = await _httpClient.GetAsync($"{_baseApiUrl}/{id}/history/");
+	        string result = await response.Content.ReadAsStringAsync();
+	        return DeserialiseObject<UserGameweekHistory>(result);
+        }
+
 
         // TODO: set_captain - Requires post to work.
         // TODO: set_transfer - Requires post to work.

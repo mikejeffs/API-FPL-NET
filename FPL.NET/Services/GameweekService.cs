@@ -16,10 +16,7 @@ namespace FPL.NET.Services
         
         public async Task<List<Gameweek>> GetGameweeks()
         {
-            SetHeaders();
-            var response = await _httpClient.GetAsync(_bootstrapStaticUrl);
-            string data = await response.Content.ReadAsStringAsync();
-            var bootstrapStaticData = DeserialiseObject<BootstrapStaticMapping>(data);
+            var bootstrapStaticData = await GetBootstrapStaticData();
             return bootstrapStaticData.Events;
         }
         
@@ -32,12 +29,12 @@ namespace FPL.NET.Services
             return bootstrapStaticData.Events.First(g => g.Id == id);
         }
         
-        public async Task<GameweekLiveData> GetGameweekLivePlayerPerformances(int id)
+        public async Task<GameweekLiveDataMapping> GetGameweekLivePlayerPerformances(int id)
         {
             SetHeaders();
             var response = await _httpClient.GetAsync($"{_baseApiUrl}/{id}/live");
             string data = await response.Content.ReadAsStringAsync();
-            return DeserialiseObject<GameweekLiveData>(data);
+            return DeserialiseObject<GameweekLiveDataMapping>(data);
         }
     }
 }

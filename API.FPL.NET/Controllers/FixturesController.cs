@@ -3,6 +3,7 @@ using System.ComponentModel;
 using System.Threading.Tasks;
 using FPL.NET.Exceptions;
 using FPL.NET.Models;
+using FPL.NET.Models.Fixtures;
 using FPL.NET.Models.League;
 using FPL.NET.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -39,7 +40,7 @@ namespace API.FPL.NET.Controllers
             }
         }
         
-        [HttpGet("id")]
+        [HttpGet("{id}")]
         [ProducesResponseType(typeof(List<Fixture>), 200)]
         [ProducesResponseType(400)]
         [Description("Returns a fixture.")]
@@ -56,7 +57,7 @@ namespace API.FPL.NET.Controllers
             }
         }
         
-        [HttpGet("fixtureId")]
+        [HttpGet("{fixtureId}")]
         [ProducesResponseType(typeof(FixtureStats), 200)]
         [ProducesResponseType(400)]
         [Description("Returns a list of fixture stats for a given fixture based on the stat identifier provided." +

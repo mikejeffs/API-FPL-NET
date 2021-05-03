@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
 using FPL.NET.Models;
+using FPL.NET.Models.Players;
 
 namespace FPL.NET.Services
 {

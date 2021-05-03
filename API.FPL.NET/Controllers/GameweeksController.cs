@@ -59,14 +59,14 @@ namespace API.FPL.NET.Controllers
         }
         
         [HttpGet("{id}/live")]
-        [ProducesResponseType(typeof(GameweekLiveData), 200)]
+        [ProducesResponseType(typeof(GameweekLiveDataMapping), 200)]
         [ProducesResponseType(400)]
         [Description("Returns a particular gameweek data.")]
         public async Task<IActionResult> GetGameweekLivePlayerPerformanceDataAsync(int id)
         {
             try
             {
-                GameweekLiveData liveData = await _gameweekService.GetGameweekLivePlayerPerformances(id);
+                GameweekLiveDataMapping liveData = await _gameweekService.GetGameweekLivePlayerPerformances(id);
                 return Ok(liveData);
             }
             catch (FplException ex)

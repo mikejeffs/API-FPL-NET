@@ -67,6 +67,8 @@ namespace API.FPL.NET
                 .ConfigurePrimaryHttpMessageHandler(() => httpClientHandler);
             services.AddHttpClient<GameweekService>()
                 .ConfigurePrimaryHttpMessageHandler(() => httpClientHandler);
+            services.AddHttpClient<PlayerService>()
+                .ConfigurePrimaryHttpMessageHandler(() => httpClientHandler);
             
             
             services.AddHealthChecks();

@@ -1,5 +1,7 @@
 using System.Collections.Generic;
 using System.Net.Http;
+using System.Threading.Tasks;
+using FPL.NET.Models;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
@@ -45,5 +47,13 @@ namespace FPL.NET.Services
 				_httpClient.DefaultRequestHeaders.Add(header.Key, header.Value);
 			}
 		}
+
+        protected async Task<BootstrapStaticMapping> GetBootstrapStaticData()
+        {
+            SetHeaders();
+            var response = await _httpClient.GetAsync(_bootstrapStaticUrl);
+            string data = await response.Content.ReadAsStringAsync();
+            return DeserialiseObject<BootstrapStaticMapping>(data);
+        }
     }
 }

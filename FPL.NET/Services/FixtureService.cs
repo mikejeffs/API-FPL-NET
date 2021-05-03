@@ -3,6 +3,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using FPL.NET.Models;
+using FPL.NET.Models.Fixtures;
 using FPL.NET.Models.League;
 
 namespace FPL.NET.Services

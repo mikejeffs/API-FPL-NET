@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 
-namespace FPL.NET.Models
+namespace FPL.NET.Models.Fixtures
 {
-    public sealed class Fixture
+    public class Fixture
     {
         /// <summary>
         /// Unique identifier of the fixture.

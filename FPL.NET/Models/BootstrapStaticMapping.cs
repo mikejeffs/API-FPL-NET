@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using FPL.NET.Models.Gameweeks;
+using FPL.NET.Models.Players;
 
 namespace FPL.NET.Models
 {
